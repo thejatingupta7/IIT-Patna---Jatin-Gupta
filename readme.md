@@ -6,14 +6,18 @@ A simple project for processing English-Hindi datasets and evaluating Google Gem
 
 ```
 task 1/
-├── main1.ipynb              📊 Dataset processing
-├── main2.ipynb              🤖 Translation with Gemini
+├── Assignment_1.ipynb              📊 Dataset processing
+├── Assignment_2.ipynb              🤖 Translation with Gemini
+├── Assignment_2.1.ipynb            🤖 Translation with Gemini (tuned prompt)
 ├── train.xlsx               📋 Raw data from Hugging Face
 ├── output_dataset_1.xlsx    ✨ Clean processed data
-└── translation_metrics.txt 📈 Evaluation results
+├── output_dataset_2.xlsx    ✨ English to Hindi (translated) text
+├── output_dataset_2.1.xlsx    ✨ English to Hindi (translated) text (prompt tuned)
+├── metrics_Assignment_2.txt  📈 Evaluation metrics 1 (Simple prompt)
+└── metrics_Assignment_2.1.txt 📈 Evaluation metrics 2  (Prompt Tuned)
 ```
 
-## 🔥 Part 1: Dataset Processing (main1.ipynb)
+## 🔥 Assessment 1: English–Hindi Dataset Processing and Analysis (Assignment_1.ipynb)
 
 ### What it does:
 - 📥 Loads English-Hindi dataset from Hugging Face
@@ -28,7 +32,7 @@ task 1/
 4. Remove sentences with huge word count differences ⚖️
 5. Save clean dataset 💾
 
-## 🤖 Part 2: Translation Testing (main2.ipynb)
+## 🤖  Assessment No. 2 – Translation with LLM (Assignment_2.ipynb)
 
 ### What it does:
 - 🌟 Uses Google Gemini to translate 100 English sentences
@@ -58,10 +62,13 @@ client = genai.Client(api_key="your_gemini_key")
 
 ## 🚀 How to Run
 
-1. Run `main1.ipynb` first 📊
-2. Check that `train.xlsx` is created ✅
-3. Run `main2.ipynb` for translation testing 🤖
-4. Check  results `train.xlsx` ! 📈
+1. Run `Assignment_1.ipynb` first 📊 to preprocess the text.
+2. Check that `output_data_1.xlsx` is created ✅ (pre-processsed file)
+3. Run `Assignment_2.ipynb` for translation testing 🤖 (Model translating)
+4. Check translated text in `output_dataset_2.xlsx` ! 📈
+5. Metric Score 1st run is in `metrics_Assignment_2.txt`!!  ✅  (SIMPLE PROMPT) --> LED TO OVER-EXPLANATION
+6. Check translated text in `output_dataset_2.1.xlsx` ! 📈
+7. Metric Score 2nd run is in `metrics_Assignment_2.1.txt`!!  ✅  (PROMPT TUNED) 
 
 ## 📈 Results
 
@@ -76,4 +83,5 @@ client = genai.Client(api_key="your_gemini_key")
 - **Slow processing?** 🐌 Try smaller batches
 
 ## 👨‍🎓 Author
+
 **Jatin Gupta** 
